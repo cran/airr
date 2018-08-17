@@ -7,9 +7,7 @@
 \alias{names,Schema-method}
 \alias{Schema-method}
 \alias{[,Schema,character-method}
-\alias{Schema-method}
 \alias{$,Schema-method}
-\alias{Schema-method}
 \alias{AlignmentSchema}
 \alias{RearrangementSchema}
 \title{S4 class defining an AIRR standard schema}

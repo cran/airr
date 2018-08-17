@@ -6,20 +6,20 @@
 \alias{read_alignment}
 \title{Read an AIRR TSV}
 \usage{
-read_airr(file, base = c("0", "1"), schema = RearrangementSchema, ...)
+read_airr(file, base = c("1", "0"), schema = RearrangementSchema, ...)
 
-read_rearrangement(file, base = c("0", "1"), ...)
+read_rearrangement(file, base = c("1", "0"), ...)
 
-read_alignment(file, base = c("0", "1"), ...)
+read_alignment(file, base = c("1", "0"), ...)
 }
 \arguments{
 \item{file}{input file path.}
 
 \item{base}{starting index for positional fields in the input file. 
+If \code{"1"}, then these fields will not be modified.
 If \code{"0"}, then fields ending in \code{"_start"} and \code{"_end"}
 are 0-based half-open intervals (python style) in the input file 
-and will be converted to 1-based closed-intervals (R style). 
-If \code{"1"}, then these fields will not be modified.}
+and will be converted to 1-based closed-intervals (R style).}
 
 \item{schema}{\code{Schema} object defining the output format.}
 

@@ -6,12 +6,12 @@
 \alias{write_alignment}
 \title{Write an AIRR TSV}
 \usage{
-write_airr(data, file, base = c("0", "1"), schema = RearrangementSchema,
-  ...)
+write_airr(data, file, base = c("1", "0"),
+  schema = RearrangementSchema, ...)
 
-write_rearrangement(data, file, base = c("0", "1"), ...)
+write_rearrangement(data, file, base = c("1", "0"), ...)
 
-write_alignment(data, file, base = c("0", "1"), ...)
+write_alignment(data, file, base = c("1", "0"), ...)
 }
 \arguments{
 \item{data}{data.frame of Rearrangement data.}
@@ -19,11 +19,12 @@ write_alignment(data, file, base = c("0", "1"), ...)
 \item{file}{output file name.}
 
 \item{base}{starting index for positional fields in the output file. 
+Fields in the input \code{data} are assumed to be 1-based 
+closed-intervals (R style). 
+If \code{"1"}, then these fields will not be modified. 
 If \code{"0"}, then fields ending in \code{_start} and \code{_end}
 will be converted to 0-based half-open intervals (python style) 
-in the output file. If \code{"1"}, then these fields will not be 
-modified. Fields in the input \code{data} are assumed to be 
-1-based closed-intervals (R style).}
+in the output file.}
 
 \item{schema}{\code{Schema} object defining the output format.}
 
