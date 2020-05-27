@@ -6,8 +6,7 @@
 \alias{write_alignment}
 \title{Write an AIRR TSV}
 \usage{
-write_airr(data, file, base = c("1", "0"),
-  schema = RearrangementSchema, ...)
+write_airr(data, file, base = c("1", "0"), schema = RearrangementSchema, ...)
 
 write_rearrangement(data, file, base = c("1", "0"), ...)
 

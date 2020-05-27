@@ -11,7 +11,13 @@
 \alias{AlignmentSchema}
 \alias{RearrangementSchema}
 \title{S4 class defining an AIRR standard schema}
-\format{A \code{Schema} object.}
+\format{
+A \code{Schema} object.
+
+An object of class \code{Schema} of length 1.
+
+An object of class \code{Schema} of length 1.
+}
 \usage{
 \S4method{names}{Schema}(x)
 
@@ -49,6 +55,8 @@ The following predefined Schema objects are defined:
 \item{\code{optional}}{\code{character} vector of non-required fields.}
 
 \item{\code{properties}}{\code{list} of field definitions.}
+
+\item{\code{info}}{\code{list} schema information.}
 }}
 
 \seealso{

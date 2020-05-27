@@ -3,7 +3,9 @@
 \name{ExampleData}
 \alias{ExampleData}
 \title{Example AIRR data}
-\format{\code{extdata/rearrangement-example.tsv.gz}: Rearrangement TSV file.}
+\format{
+\code{extdata/rearrangement-example.tsv.gz}: Rearrangement TSV file.
+}
 \description{
 Example data files compliant with the the AIRR Data Representation standards.
 }
