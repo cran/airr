@@ -2,54 +2,46 @@
 % Please edit documentation in R/Interface.R
 \name{write_airr}
 \alias{write_airr}
-\alias{write_rearrangement}
-\alias{write_alignment}
-\title{Write an AIRR TSV}
+\title{Write AIRR Data Model records to YAML or JSON files}
 \usage{
-write_airr(data, file, base = c("1", "0"), schema = RearrangementSchema, ...)
-
-write_rearrangement(data, file, base = c("1", "0"), ...)
-
-write_alignment(data, file, base = c("1", "0"), ...)
+write_airr(
+  data,
+  file,
+  format = c("auto", "yaml", "json"),
+  validate = TRUE,
+  model = TRUE
+)
 }
 \arguments{
-\item{data}{data.frame of Rearrangement data.}
+\item{data}{\code{list} containing AIRR Model Records.}
 
 \item{file}{output file name.}
 
-\item{base}{starting index for positional fields in the output file. 
-Fields in the input \code{data} are assumed to be 1-based 
-closed-intervals (R style). 
-If \code{"1"}, then these fields will not be modified. 
-If \code{"0"}, then fields ending in \code{_start} and \code{_end}
-will be converted to 0-based half-open intervals (python style) 
-in the output file.}
+\item{format}{format of the output file. Must be one of \code{"auto"}, \code{"yaml"}, or 
+\code{"json"}. If \code{"auto"} (default), the format will be 
+detected from the \code{file} extension.}
 
-\item{schema}{\code{Schema} object defining the output format.}
+\item{validate}{run schema validation prior to write if \code{TRUE}.}
 
-\item{...}{additional arguments to pass to \link[readr]{write_delim}.}
+\item{model}{if \code{TRUE} validate and write only AIRR DataFile defined objects. 
+If \code{FALSE} attempt validation and write of all objects in \code{data}.}
 }
 \description{
-\code{write_airr} writes a TSV containing AIRR formatted records.
-}
-\details{
-\code{write_rearrangement} writes a data.frame containing AIRR Rearrangement data to TSV.
-
-\code{write_alignment} writes a data.frame containing AIRR Alignment data to TSV.
+\code{write_airr} writes a YAML or JSON file containing AIRR Data Model records.
 }
 \examples{
-# Get path to the rearrangement-example file
-file <- system.file("extdata", "rearrangement-example.tsv.gz", package="airr")
+# Get path to the repertoire-example file
+file <- system.file("extdata", "repertoire-example.yaml", package="airr")
 
 # Load data file
-df <- read_rearrangement(file)
+repertoire <- read_airr(file)
 
 # Write a Rearrangement data file
-outfile <- file.path(tempdir(), "output.tsv")
-write_rearrangement(df, outfile)
+outfile <- file.path(tempdir(), "output.yaml")
+write_airr(repertoire, outfile)
 
 }
 \seealso{
-See \link{Schema} for the AIRR schema object definition.
-See \link{read_airr} for reading to AIRR files.
+See \link{Schema} for the AIRR schema definition objects.
+See \link{read_airr} for reading to AIRR Data Model files.
 }

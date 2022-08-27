@@ -8,8 +8,14 @@
 \alias{Schema-method}
 \alias{[,Schema,character-method}
 \alias{$,Schema-method}
+\alias{InfoSchema}
+\alias{DataFileSchema}
 \alias{AlignmentSchema}
 \alias{RearrangementSchema}
+\alias{RepertoireSchema}
+\alias{GermlineSetSchema}
+\alias{GenotypeSetSchema}
+\alias{AIRRSchema}
 \title{S4 class defining an AIRR standard schema}
 \format{
 A \code{Schema} object.
@@ -17,6 +23,18 @@ A \code{Schema} object.
 An object of class \code{Schema} of length 1.
 
 An object of class \code{Schema} of length 1.
+
+An object of class \code{Schema} of length 1.
+
+An object of class \code{Schema} of length 1.
+
+An object of class \code{Schema} of length 1.
+
+An object of class \code{Schema} of length 1.
+
+An object of class \code{Schema} of length 1.
+
+An object of class \code{list} of length 26.
 }
 \usage{
 \S4method{names}{Schema}(x)
@@ -25,9 +43,21 @@ An object of class \code{Schema} of length 1.
 
 \S4method{$}{Schema}(x, name)
 
+InfoSchema
+
+DataFileSchema
+
 AlignmentSchema
 
 RearrangementSchema
+
+RepertoireSchema
+
+GermlineSetSchema
+
+GenotypeSetSchema
+
+AIRRSchema
 }
 \arguments{
 \item{x}{\code{Schema} object.}
@@ -43,13 +73,28 @@ standards.
 \details{
 The following predefined Schema objects are defined:
 
+\code{InfoSchema}: AIRR Info \code{Schema}.
+
+\code{DataFileSchema}: AIRR DataFile \code{Schema}.
+
 \code{AlignmentSchema}: AIRR Alignment \code{Schema}.
 
 \code{RearrangementSchema}: AIRR Rearrangement \code{Schema}.
+
+\code{RepertoireSchema}: AIRR Repertoire \code{Schema}.
+
+\code{GermlineSetSchema}: AIRR GermlineSet \code{Schema}.
+
+\code{GenotypeSetSchema}: AIRR GenotypeSet \code{Schema}.
+
+\code{AIRRSchema}: named list containing all non-experimental 
+                              AIRR \code{Schema} objects.
 }
 \section{Slots}{
 
 \describe{
+\item{\code{definition}}{name of the schema definition.}
+
 \item{\code{required}}{\code{character} vector of required fields.}
 
 \item{\code{optional}}{\code{character} vector of non-required fields.}
@@ -61,6 +106,5 @@ The following predefined Schema objects are defined:
 
 \seealso{
 See \link{load_schema} for loading a \code{Schema} from the definition set.
-See \link{read_airr}, \link{write_airr} and \link{validate_airr} schema operators.
 }
 \keyword{datasets}

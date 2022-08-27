@@ -21,22 +21,23 @@ Valid definitions include:
 \itemize{
   \item   \code{"Rearrangement"}
   \item   \code{"Alignment"}
+  \item   \code{"Repertoire"}
   \item   \code{"Study"}
   \item   \code{"Subject"}
   \item   \code{"Diagnosis"}
   \item   \code{"Sample"}
-  \item   \code{"CellProcessing"}
-  \item   \code{"NucleicAcidProcessing"}
-  \item   \code{"RawSequenceData"}
-  \item   \code{"SoftwareProcessing"}
+  \item   \code{"SampleProcessing"}
+  \item   \code{"DataProcessing"}
+  \item   \code{"GermlineSet"}
+  \item   \code{"GenotypeSet"}
 }
 }
 \examples{
 # Load the Rearrangement definition
 schema <- load_schema("Rearrangement")
 
-# Load the Alignment definition
-schema <- load_schema("Alignment")
+# Load the Repertoire definition
+schema <- load_schema("Repertoire")
 
 }
 \seealso{
