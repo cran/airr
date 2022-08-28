@@ -1,6 +1,6 @@
-d6ca3670f747bef2f4e9d056438bd817 *DESCRIPTION
+4233ba921b4bbe1bc066fd805385d501 *DESCRIPTION
 3a194028caced17b76d6a0be488a1663 *NAMESPACE
-bb4dedea248adc2c7b53eb69aa8a6f94 *NEWS.md
+c9ddf4d8a3e0ba46cf8efdb2e0fb3067 *NEWS.md
 77390dedba3e178fb16259c60e72a71d *R/AIRR.R
 23c1ef38035e6da5bbff4a9d6782f2d4 *R/Interface.R
 4811f7d53d3eb13f7b5b754f9dd91c5b *R/Schema.R
@@ -9,7 +9,7 @@ a9f9f02d9d78aa79001e72dccc58d8a9 *build/vignette.rds
 4ce369f8ad3c08575aa096619a930f57 *inst/doc/Usage-Vignette.R
 48e2574fa2887e1c80a1744e05b09699 *inst/doc/Usage-Vignette.Rmd
 a6406ff91ae5d92ab6c472b35a9b1627 *inst/doc/Usage-Vignette.html
-8b2fb935f840b5f10f05d1a9a4dcb87f *inst/extdata/airr-schema.yaml
+58fee0732fe5e6647498a04eeb2fe08b *inst/extdata/airr-schema.yaml
 90d0603528bbe6d312b5f6141c1d2a7d *inst/extdata/germline-example.json
 1891f46a99cc5107008e020be186e09c *inst/extdata/rearrangement-example.tsv.gz
 28138b18ddaead62ca1908684e6f8511 *inst/extdata/repertoire-example.yaml
